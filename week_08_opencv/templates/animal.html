@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>animal-test</title>
+    <link type="text/css" rel="stylesheet" href="../static/CSS/kang.css">
+    <!-- <script defer src="test.js"></script> -->
+    <script src="../static/JS/test.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hi+Melody&family=Single+Day&display=swap" rel="stylesheet">
+</head>
+<body  style="overflow-x: hidden; text-align: center;display: flex;align-items: center;">
+
+    
+    <div id="all">
+    <div><a href="./inner.html"><img id= "insta" src="../static/image/penguin.png" width="50" height="50"><img id= "insta" src="../static/image/test.png" width="200" height="50"></a></div>
+    <hr>
+    
+
+
+    
+    <!-- <form id="uploadForm">
+        <input type="file" name="file" />
+        <input type="submit" value="Upload">
+    </form> -->
+
+    <form id="uploadForm" action="/upload" method="post" enctype="multipart/form-data">
+        <!-- <input type="file" name="file"> -->
+        <br>
+        <label style="font-size: 30px;font-family: 'Single Day', cursive;"><input type="checkbox" name="gender" value="man" checked="checked" onclick='checkOnlyOne(this)'> 남자</label>
+        <label style="font-size: 30px;font-family: 'Single Day', cursive;"><input type="checkbox" name="gender" value="woman" onclick='checkOnlyOne(this)'> 여자</label>
+
+            <div class="file_box">
+            <div  onclick="document.getElementById('file_name').click();" class="file_name">
+                <input type="file" id="file_name" name="file" style="display:none;">
+                {% if data %}
+                <img src="{{url_for('static', filename='../static/image/uploaded_file.png')}}" width="300px" height="300px" >
+
+                {% else %}
+                <img src="{{url_for('static', filename='../static/image/default_image.jpg')}}" width="300px" height="300px">
+                {% endif %}
+
+                
+
+            </div>
+            </div>
+
+        <br>
+        <input id="other" type="submit" value="제출" style="font-size: 20px; font-family: 'Single Day', cursive;">
+    </form>
+
+    
+    
+    <div>
+        {% for i in data %}
+        <p style="font-size: 40px; font-family: 'Single Day', cursive;">고양이: {{(i[0]*100)|round(1)}}%</p>
+        <p style="font-size: 40px; font-family: 'Single Day', cursive;">강아지: {{(i[1]*100)|round(1)}}%</p>
+        <p style="font-size: 40px; font-family: 'Single Day', cursive;">토끼: {{(i[2]*100)|round(1)}}%</p>
+        <p style="font-size: 40px; font-family: 'Single Day', cursive;">말(뱀): {{(i[3]*100)|round(1)}}%</p>
+
+        {% endfor %}
+
+        
+
+    </div>
+    </div>
+  
+</body>
+</html>
