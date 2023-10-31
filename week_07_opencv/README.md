@@ -9,7 +9,7 @@
 
 ## ⚙ 개발환경
 
-<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-123452?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-EC407A?style=for-the-badge&logo=CSS3&logoColor=white"><img src="https://img.shields.io/badge/JAVASCRIPT-EC47A?style=for-the-badge&logo=JAVASCRIPT&logoColor=white"><img src="https://img.shields.io/badge/flask-570679?style=for-the-badge&logo=flask&logoColor=white">
+<img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=Python&logoColor=white"> <img src="https://img.shields.io/badge/HTML5-123452?style=for-the-badge&logo=HTML5&logoColor=white"> <img src="https://img.shields.io/badge/CSS3-EC407A?style=for-the-badge&logo=CSS3&logoColor=white"> <img src="https://img.shields.io/badge/JAVASCRIPT-EC47A?style=for-the-badge&logo=JAVASCRIPT&logoColor=white"> <img src="https://img.shields.io/badge/flask-570679?style=for-the-badge&logo=flask&logoColor=white">
 
 
 
