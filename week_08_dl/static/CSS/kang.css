@@ -1,0 +1,125 @@
+/* 유나 님 CSS */
+header {
+    text-align: center;
+}
+
+#insta {
+    position: relative;
+    padding-top: 7px;
+    text-align: center;
+   
+
+}
+
+
+::-webkit-scrollbar {
+    width: 0px;
+  }
+
+::-webkit-scrollbar-track {
+    background: var(--back-color-more-more);
+    border-radius: 2px;
+  }
+::-webkit-scrollbar-thumb {
+    background:  var(--fore-color-hint);
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-thumb:hover {
+    background: var(--fore-color);
+  }
+
+
+#back{
+    overflow: auto;
+    width:100%;
+    height:100vh; 
+    scroll-behavior:smooth;
+    scroll-snap-type: y mandatory;
+}
+
+.main{
+    scroll-snap-align: center;
+    height: 100vh;
+}
+
+body{
+  background-color: white;
+  width:1000px ;
+  margin: 0 auto;
+  background-image: url("../image/background2.png");
+  background-size: 100%;
+  
+}
+
+div#all{
+  background: white;
+  text-align: center;
+  width:1000px ;
+  height:920px;
+  vertical-align: middle;
+  
+}
+
+form #uploadForm{
+  width:500px ;
+  height:300px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+
+.file_box {
+  border: 2px solid rgb(13 110 253 / 25%);
+  border-radius: 10px;
+  margin-top: 20px;
+  
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex; justify-content:center;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+  
+}
+
+.file_box img{
+  border-radius: 3%;
+}
+
+.file_name{
+  line-height: 300px;
+}
+
+.file_box:hover{
+  background: silver;
+}
+
+div#file_name{
+  
+  height: 400px;
+  display: flex; justify-content:center;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+
+
+div.file_name{
+  
+  height: 400px;
+  display: flex; justify-content:center;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+

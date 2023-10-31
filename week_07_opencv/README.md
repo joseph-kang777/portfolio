@@ -1,4 +1,4 @@
-# week_8_opencv
+# week_7_opencv
 
 ## 🖥 프로젝트명
 동물상 테스트 : 나와 닮은 동물 찾기

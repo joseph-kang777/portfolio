@@ -1,3 +1,13 @@
-# woman_animal_model ignore
-week_08_opencv/woman_animal.pkl
-week_08_opencv/static/image/*.mp4
+# week_07_opencv 
+#woman_animal_model ignored
+week_07_opencv/woman_animal.pkl
+
+#video ignored
+week_07_opencv/static/image/*.mp4
+
+# week_08_dl
+# model ignored 
+week_08_dl/models
+
+# image ignored
+week_08_dl/image

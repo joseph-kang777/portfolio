@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>myface</title>
+    <link type="text/css" rel="stylesheet" href="../static/CSS/insta_style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hi+Melody&family=Jua&family=Single+Day&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="all">
+        <div id="insta"><a href="inner.html" style="font-family: 'Jua', sans-serif;font-size: 50px;">페이스북</a></div>
+    
+        <hr>
+
+        <form id="uploadForm" action="/upload1" method="post" enctype="multipart/form-data">
+           
+            <br>
+    
+                <div class="file_box">
+                <div  onclick="document.getElementById('file_name').click();" class="file_name">
+                    <input onchange="showImage()"  type="file" id="file_name" name="file" style="display:none;" >
+                    {% if data %}
+                    <img src="{{url_for('static', filename='../static/image/uploaded_file.png')}}" width="300px" height="300px" alt="Uploaded Image" id="uploaded-image" class="uploaded-image" >
+    
+                    {% else %}
+                    <img src="{{url_for('static', filename='../static/image/default_image.jpg')}}" width="300px" height="300px" alt="Uploaded Image" id="uploaded-image" class="uploaded-image">
+                    {% endif %}
+                </div>
+                </div>
+    
+            <br>
+            <input id="other" type="submit" value="제출" style="font-family: 'Jua', sans-serif;font-size: 20px;">
+        </form>
+        
+        <div>
+            <p style="font-family: 'Jua', sans-serif;font-size: 40px;">당신의 기숙사는: {{data}}</p>
+        </div>
+
+        <br>
+        <hr>
+
+    </div>
+
+    <script>
+        function showImage() {
+            var input = document.getElementById("file_name");
+            var uploadedImage = document.getElementById("uploaded-image");
+            var uploadedImageContainer = document.getElementById("uploaded-image-container");
+            var resultContainer = document.getElementById("result-container");
+    
+            var reader = new FileReader();
+    
+            reader.onload = function (e) {
+                uploadedImage.src = e.target.result;
+                uploadedImageContainer.style.display = "flex";
+                resultContainer.style.display = "none";
+            };
+    
+            reader.readAsDataURL(input.files[0]);
+        }
+    </script>
+</body>
+</html>

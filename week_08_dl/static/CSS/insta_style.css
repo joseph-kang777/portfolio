@@ -1,0 +1,200 @@
+/* 유나 님 CSS */
+::-webkit-scrollbar {
+    width: 0px;
+  }
+header {
+    text-align: center;
+}
+
+#insta {
+    position: relative;
+    padding-top: 7px;
+    text-align: center;
+
+}
+
+
+/* 요셉 CSS  */
+
+body{
+    margin: 0px;
+}
+
+div#button1{
+    padding-top: 3px;
+    background-color: white;
+    width: 50%;
+    height: 40px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+    
+}
+
+div#button1>img{
+    height: 30px;
+    width: 30px;
+}
+
+div#button2{
+    padding-top: 3px;
+    background-color: white;
+    width: 50%;
+    height: 40px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+div#button2>img{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+div#button3{
+    padding-top: 3px;
+    background-color: white;
+    width: 20%;
+    height: 40px;
+    float: left;
+    text-align: center;
+    margin: 0 auto;
+    vertical-align: middle;
+}
+
+
+div#button3 img{
+    height: 30px;
+    width: 30px;
+}
+
+
+
+hr{
+    margin: 5px;
+}
+
+
+
+div#group > table {
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+}
+
+
+
+
+
+div#group td{
+    vertical-align:middle;
+}
+
+
+
+body{
+    background-color: white;
+    width:1000px ;
+    height:900px;
+    margin: 0 auto;
+    background-color: #4169E1;
+    background-size: 100%;
+    
+}
+
+div#all{
+    background: white;
+}
+
+div#group table{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+div#all{
+  background: white;
+  text-align: center;
+  width:1000px ;
+  vertical-align: middle;
+  
+}
+
+form #uploadForm{
+  width:500px ;
+  height:600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+
+.file_box {
+  border: 2px solid rgb(13 110 253 / 25%);
+  border-radius: 10px;
+  margin-top: 20px;
+  
+  text-align: center;
+  width: 300px;
+  height: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  display: flex; justify-content:center;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+  
+}
+
+.file_box img{
+  border-radius: 3%;
+}
+
+.file_name{
+  line-height: 300px;
+}
+
+.file_box:hover{
+  background: silver;
+}
+
+div#file_name{
+  
+  height: 400px;
+  display: flex; justify-content:center;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+
+
+div.file_name{
+  
+  height: 400px;
+  display: flex; justify-content:center;
+  margin-top: auto;
+  margin-bottom: auto;
+  vertical-align: middle;
+  vertical-align:text-bottom;
+}
+
+a{
+  text-decoration: none;
+  text-decoration-line: none;
+
+  
+}
+
+a:visited{
+  color: black;
+}
