@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" href="../static/CSS/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Hi+Melody&family=Jua&family=Single+Day&display=swap" rel="stylesheet">
+    
+    <title>Document</title>
+</head>
+<body>
+    <audio autoplay controls loop src="../static/image/newJeans.mp3"></audio>
+    <h1 style="font-family: 'Jua', sans-serif;font-size: 60px;">나만의 냉장고를 부탁해</h1>
+
+    
+    <div class="home__title" style="font-family: 'Jua', sans-serif;font-size: 40px;"></div>
+
+    <div class="input_"><input style="font-family: 'Jua', cursive;font-size: 25px;" type="text" placeholder="입력하세요" id="dataInput" onkeydown='sendDataToServer()';></div>
+
+
+    <!-- 요리명 -->
+    <!-- <div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv"></div> -->
+
+    <!-- 요리사진 및 레시피 -->
+    <div  style="font-family: 'Jua', cursive;font-size: 25px; text-align: center;" id ="total">
+        <div id="imgDiv"><div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv"></div><a id="link1" href="#" target="_blank"><img src="" id="myImg"></a></div>
+        <div  id="myDiv2"></div>
+    </div>
+
+    <!-- 요리명 -->
+    <!-- <div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv3"></div> -->
+
+    <!-- 요리사진 및 레시피 -->
+    <div  style="font-family: 'Jua', cursive;font-size: 25px; text-align: center;" id ="total2" >
+        <div id="imgDiv2"><div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv3"></div><a id="link2" href="#" target="_blank"><img src="" id="myImg2"></a></div>
+        <div id="myDiv4"></div>
+    </div>
+
+    <!-- 요리명 -->
+    <!-- <div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv5"></div> -->
+
+    <!-- 요리사진 및 레시피 -->
+    <div style="font-family: 'Jua', cursive;font-size: 25px;text-align: center;" id ="total3" >
+        <div id="imgDiv3"><div style="font-family: 'Jua', cursive;font-size: 25px;" id="myDiv5"></div><a id="link3" href="#" target="_blank"><img src="" id="myImg3"></a></div>
+        <div id="myDiv6"></div>
+    </div>
+
+
+
+    <script>
+        function sendDataToServer() {
+        var dataInput = document.getElementById("dataInput");
+        //요리명
+        var myDiv = document.getElementById("myDiv");
+        var myDiv3 = document.getElementById("myDiv3");
+        var myDiv5 = document.getElementById("myDiv5");
+
+        //레시피
+        var myDiv2 = document.getElementById("myDiv2");
+        var myDiv4 = document.getElementById("myDiv4");
+        var myDiv6 = document.getElementById("myDiv6");
+
+        //사진
+        var myImage = document.getElementById("myImg");
+        var myImage2 = document.getElementById("myImg2");
+        var myImage3 = document.getElementById("myImg3");
+
+        //링크
+        var link = "https://www.youtube.com/results?search_query=";
+
+        var link1 = document.getElementById("link1");
+        var link2 = document.getElementById("link2");
+        var link3 = document.getElementById("link3");
+
+        // AJAX 요청을 보냅니다.
+        var xhr = new XMLHttpRequest();
+        var formdata = new FormData();
+
+        dataInput.oninput = function () {
+        var data = dataInput.value;
+
+        // AJAX 요청을 보냅니다.
+        xhr.open("POST", "/request_data", true);
+        formdata.append("key", data);
+
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                myDiv.textContent = JSON.parse(xhr.responseText)["cook_name"];
+                myDiv3.textContent = JSON.parse(xhr.responseText)["cook_name2"];
+                myDiv5.textContent = JSON.parse(xhr.responseText)["cook_name3"];
+
+                link1.href = link + JSON.parse(xhr.responseText)["cook_name"];
+                link2.href = link + JSON.parse(xhr.responseText)["cook_name2"];
+                link3.href = link + JSON.parse(xhr.responseText)["cook_name3"];
+
+                myDiv2.textContent = JSON.parse(xhr.responseText)["recipe_name"];
+                myDiv4.textContent = JSON.parse(xhr.responseText)["recipe_name2"];
+                myDiv6.textContent = JSON.parse(xhr.responseText)["recipe_name3"];
+
+
+                myImage.src = JSON.parse(xhr.responseText)["picture_name"];
+                myImage2.src = JSON.parse(xhr.responseText)["picture_name2"];
+                myImage3.src = JSON.parse(xhr.responseText)["picture_name3"];
+
+                //["recipe_name"];
+              // AJAX 응답을 <div>에 표시
+            }
+        };
+
+        xhr.send(formdata);
+    };
+}
+    </script>
+
+    <script>
+   document.addEventListener("DOMContentLoaded", function () {
+    const input = document.getElementById("dataInput");
+    const placeholderText = input.getAttribute("placeholder");
+    let currentIndex = 0;
+    const delay = 300; // 글자가 나오는 간격 (밀리초)
+
+    function updatePlaceholder() {
+        if (currentIndex < placeholderText.length) {
+            input.setAttribute("placeholder", placeholderText.substring(0, currentIndex + 1));
+            currentIndex++;
+        } else {
+            currentIndex = 0;
+        }
+    }
+    setInterval(updatePlaceholder, delay);
+});
+    </script>
+
+   
+
+</body>
+</html>

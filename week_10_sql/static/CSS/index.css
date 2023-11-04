@@ -1,0 +1,172 @@
+body{
+    background-image: linear-gradient(rgba(255, 255, 255, 0.8),rgba(255, 255, 255, 0.8)), url("../image/back.png");
+    background-size: 100%;
+
+    
+}
+
+h1{
+    text-align: center;
+}
+
+div.home__title{
+    text-align: center;
+    height: 50px;
+    margin-top: auto;
+    margin-bottom: auto;
+    
+}
+
+div.input_{
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div#myDiv{
+    
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div#myDiv3{
+    
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+div#myDiv5{
+   
+    text-align: center;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+/* 사진 div */
+
+div#imgDiv{
+    
+    width: 40%;
+    height: auto;
+    text-align: center;
+    float: left;
+    object-fit: cover;
+}
+
+div#imgDiv2{
+    
+    width: 40%;
+    height: auto;
+    text-align: center;
+    float: left;
+    object-fit: cover;
+}
+
+div#imgDiv3{
+    
+    width: 40%;
+    height: auto;
+    text-align: center;
+    float: left;
+    object-fit: cover;
+}
+
+/* 사진 */
+
+div#imgDiv img{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+div#imgDiv2 img{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+div#imgDiv3 img{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+/* 레시피 */
+
+div#myDiv2{
+    width: 50%;
+    
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    margin: 0 auto;
+    
+}
+
+div#myDiv4{
+    width: 50%;
+    
+    text-align: left;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    margin: 0 auto;
+    
+}
+
+div#myDiv6{
+    width: 50%;
+    
+    text-align: left;
+    
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    vertical-align: middle;
+    margin: 0 auto;
+    
+}
+
+/* 사진 레시피 담고 있는 */
+div#total{
+    width: 100%;
+    height: 500px;
+    vertical-align: middle;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+div#total2{
+    width: 100%;
+    height: 500px;
+    vertical-align: middle;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
+div#total3{
+    width: 100%;
+    height: 500px;
+    vertical-align: middle;
+    margin: 0 auto;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    
+}
+
