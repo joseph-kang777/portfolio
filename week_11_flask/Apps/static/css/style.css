@@ -1,0 +1,200 @@
+/* 메인화면 색상 및 이미지 */
+body{
+    background: white;
+}
+
+table{
+    width: 100%;
+}
+
+/* 로그인 회원가입 */
+div#auth{
+    text-align: right;
+    font-family: 'Noto Sans KR', serif;
+}
+
+div#chat{
+    height: 400px;
+}
+
+div h2{
+   text-align: center;
+}
+
+span#logo{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+    
+
+}
+
+a#logo:link{
+    color: black;
+}
+
+a#logo:visited{
+    color: black;
+}
+
+a#logo:active{
+    color: black;
+}
+
+a#logo{
+    text-decoration-line:none
+}
+
+
+
+span#login{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+span#signup{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+span#logout{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+a#logout{
+    text-decoration-line:none
+}
+
+a#login:link{
+    color: black;
+}
+
+a#login:visited{
+    color: black;
+}
+
+a#login:active{
+    color: black;
+}
+
+a#login{
+    text-decoration-line:none
+}
+
+a#signup:link{
+    color: black;
+}
+
+a#signup:visited{
+    color: black;
+}
+
+a#signup:active{
+    color: black;
+}
+
+a#signup{
+    text-decoration-line:none
+    
+}
+
+a#logout:link{
+    color: black;
+}
+
+a#logout:visited{
+    color: black;
+}
+
+a#logout:active{
+    color: black;
+}
+
+body {
+    font-family: sans-serif;
+  }
+
+.page {
+display: flex;
+min-height: 90vh;
+justify-content: center;
+align-items: center;
+}
+
+.textContainer {
+display: flex;
+flex-direction: column;
+font-weight: bold;
+font-size: 9rem;
+text-align: center;
+letter-spacing: -0.25rem;
+font-weight: bolder;
+line-height: 1;
+justify-content: center;
+}
+
+.gradientText {
+position: relative;
+background-image: linear-gradient(to right, #000, #000);
+z-index: 1;
+-webkit-background-clip: text;
+color: transparent;
+}
+
+.gradientText::before {
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+z-index: -1;
+transition: opacity 0.5s linear;
+opacity: 0;
+-webkit-background-clip: text;
+}
+
+/* 자바스크립트로 클래스 추가 */
+.transitionOn::before {
+opacity: 1;
+}
+
+.gradient_HTML::before {
+content: "나만의";
+background-image: linear-gradient(to right, #007CF0, #00DFD8);
+}
+.gradient_CSS::before {
+content: "연애이야기";
+background-image: linear-gradient(to right, #7928ca, #ff0080);
+}
+.gradient_Javascript::before {
+content: "챗봇";
+background-image: linear-gradient(to right, #ff4d4d, #f9cb28);
+}
+
+a#chat{
+    font-size:17px
+}
+
+a#chat{
+    text-decoration-line:none
+}
+
+a#chat:link{
+    color: black;
+}
+
+a#chat:visited{
+    color: black;
+}
+
+a#chat:active{
+    color: black;
+}
+
+a#chat{
+    border:solid;
+    border-radius:30px;
+    width: 40%;
+    margin: 0 auto;
+}
+

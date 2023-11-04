@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for("auth.static",filename='css/auth_style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Do+Hyeon&family=Gowun+Dodum&family=Hi+Melody&family=Jua&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Single+Day&display=swap" rel="stylesheet">
+      
+
+    <title>라이</title>
+
+
+    <table id="logo">
+        <tr>
+            <td>
+                <span id="logo">
+                    <a href="/" id="logo">LAI</a>
+                </span>
+                
+            </td>
+            <td>  
+              
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                {%with messages = get_flashed_messages(with_categories=true)%}
+
+                {% if messages %}
+            <div class="notification-container" id="notification-container">
+                <p>{{messages[0][1]}}😥</p>
+              </div>
+              <style>
+                .notification-container {
+                position: relative;
+                width: 30%;
+                text-align: center;
+                top: -150px;
+                height: 0px;
+
+                transition: transform 0.3s ease-in-out;
+                }
+                .notification-container.show {
+                transform: translateY(200px);
+                }
+                p{
+                    margin:0;
+                    
+                }
+            </style>
+            
+                {%endif%}
+            {%endwith%}
+             
+            <script>
+                const notification = document.getElementById('notification-container')
+                // Show notification
+                const showNotification = () => {
+                notification.classList.add('show')
+                setTimeout(() => {
+                    notification.classList.remove('show')
+                }, 3000)
+                }
+              </script>
+            </head>
+            <body onload="showNotification()">
+            </td>
+        </tr>
+    </table>
+
+   
+
+    <form action="login_done", method="post">
+    <table>
+        <tr>
+            <td>
+                <div id="email">
+                    <input type="text" id = "email" name ="email" required>
+                    <label>이메일</label>
+                    <span></span>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td>
+                <div id="pw">
+                    <input type="text" id = "pw" name ="pw" required>
+                    <label>비밀번호</label>
+                    <span></span>
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <td id="submit">
+                <div id="submit">
+                    <input type="submit" id ="submit" value="로그인" >
+                </div>
+            </td>
+        </tr>
+        <tr>
+            
+            <td id="check">
+                <div id="check">
+                아직 회원이 아니신가요? <a href="/auth/signup" id="signup">회원가입</a>
+                </div>
+            </td> 
+        </tr>
+    </table>
+    </form>
+      
+    
+</body>
+</html>

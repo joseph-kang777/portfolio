@@ -1,0 +1,178 @@
+/* 메인화면 색상 및 이미지 */
+/* body{
+    background-color: white;
+} */
+
+table#logo{
+  width: 100%;
+}
+span#logo{
+  font-family: 'Archivo Black', sans-serif;
+  font-size: 50px;
+}
+
+a#logo:link{
+  color: black;
+}
+
+a#logo:visited{
+  color: black;
+}
+
+a#logo:active{
+  color: black;
+}
+
+a#logo{
+  text-decoration-line:none
+}
+
+
+ form{
+  display: flex;
+  justify-content: center;
+  min-height: 90vh;
+  align-items: center;
+  }  
+
+  div#name{
+    position: relative;
+    margin-top: 60px;
+  }
+  div#email{
+    position: relative;
+    margin-top: 60px;
+  }
+  div#pw {
+    position: relative;
+    margin-top: 60px;
+  }
+  div#submit{
+    position: relative;
+    margin-top: 40px;
+  }
+  div#check{
+    position: relative;
+    margin-top: 10px;
+  }
+
+  input#name{
+    font-size: 20px;
+    color: #222222;
+    width: 400px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+  }
+  input#email{
+    font-size: 20px;
+    color: #222222;
+    width: 400px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+  }
+  input#pw{
+    font-size: 20px;
+    color: #222222;
+    width: 400px;
+    border: none;
+    border-bottom: solid #aaaaaa 1px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    position: relative;
+    background: none;
+    z-index: 5;
+  }
+  input#submit{
+    font-family: sans-serif;
+    font-size: 24px;
+    color: #222222;
+    width: 100%;
+    height: 60px ;
+    border: solid;
+    border-radius:30px;
+    position: relative;
+    font-weight: bold;
+    background-color: white;
+  }
+
+  td#submit{
+    text-align: center; 
+  }
+
+  td#check{
+    text-align: center;
+  }
+
+  input::placeholder { color: #aaaaaa; }
+  input:focus { outline: none; }
+  
+  span {
+    display: block;
+    background-color: rgb(35, 58, 189);
+    width: 0;
+    height: 2px;
+    border-radius: 2px;
+    transition: 0.4s;
+  }
+  
+  label {
+    position: absolute;
+    color: #aaa;
+    left: 10px;
+    font-size: 20px;
+    bottom: 10px;
+    transition: all 0.2s;
+  }
+  
+  input:focus ~ label, input:valid ~ label {
+    font-size: 22px;
+    bottom: 45px;
+    color: black;
+    font-weight: bold;
+  }
+  
+  input:focus ~ span, input:valid ~ span {
+    width: 100%;
+  }
+
+  a#signup{
+    text-decoration-line:none
+  }
+
+  a#signup:link{
+      color: rgb(66, 219, 60);
+  }
+
+  a#signup:visited{
+      color:  rgb(66, 219, 60);
+  }
+
+  a#signup:active{
+      color: rgb(66, 219, 60);
+  }
+
+  body{
+    -ms-overflow-style: none;
+    }
+    
+   ::-webkit-scrollbar {
+     display: none;
+   }
+
+div#notification-container{
+  font-family:  sans-serif;
+  font-size: 30px;
+  font-weight: bold;
+  margin: 0 auto;
+  color: black;
+}

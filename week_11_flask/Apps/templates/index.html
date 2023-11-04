@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라이</title>
+
+    <link rel="stylesheet" href="{{url_for("static",filename='css/style.css')}}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Black+Han+Sans&family=Do+Hyeon&family=Gowun+Dodum&family=Hi+Melody&family=Jua&family=Noto+Sans+KR&family=Noto+Serif+KR&family=Single+Day&display=swap" rel="stylesheet">
+  
+</head>
+<body>
+       
+   
+        <!--로그아웃 상태-->
+
+        {% if session.get("name") is none %}
+        <table>
+            <tr>
+                <td>
+                    <span id="logo">
+                        <a href="/" id="logo">LAI</a>
+                    </span>
+                    
+                </td>
+                <td>  
+                    <div id="auth">
+                    <span id="login">
+                        <a href="auth/login"  id="login">로그인</a>
+                    </span>
+                    <span id="signup">
+                        <a href="auth/signup" id="signup">회원가입</a>
+                    </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+
+      
+
+          <div class="page">
+                <div class="textContainer">
+                <span id="text_1" class="gradientText gradient_HTML">나만의</span>
+                <span id="text_2" class="gradientText gradient_CSS">연애이야기</span>
+                <span id="text_3" class="gradientText gradient_Javascript"
+                    >챗봇</span> 
+             
+                <br>
+        
+                <a href="auth/login" id="chat"><span id="chat"><h2>이야기 시작하기</h2></span></a>
+                </div>
+                
+            </div>
+        
+        
+          <script type="text/javascript">
+            (function () {
+              const persist = 2500;
+              const textIds = ["text_1", "text_2", "text_3"];
+      
+              const turnOnTransition = (el) => {
+                el.classList.add("transitionOn");
+                setTimeout(() => {
+                  el.classList.remove("transitionOn");
+                }, persist);
+              };
+              const runTransition = (id) => {
+                const el = document.getElementById(id);
+      
+                if (el) {
+                  setTimeout(() => {
+                    turnOnTransition(el);
+      
+                    setInterval(() => {
+                      turnOnTransition(el);
+                    }, persist * textIds.length);
+                  }, 1);
+                }
+              };
+              textIds.forEach((id, index) => {
+                setTimeout(() => {
+                  runTransition(id);
+                }, index * persist);
+              });
+            })();
+          </script>
+
+        <!--로그인 상태-->
+        {% else %}
+        <table>
+            <tr>
+                <td>
+                    <span id="logo">
+                        <a href="/" id="logo">LAI</a>
+                    </span>
+                    
+                </td>
+                <td>  
+                    <div id="auth">
+                        <span id="logout">
+                            <a href="auth/logout" id="logout">로그아웃</a>
+                        </span>
+                    </div>
+                </td>
+            </tr>
+        </table>
+        
+        
+        <style type="text/css">
+            body {
+              font-family: sans-serif;
+            }
+      
+            .page {
+              display: flex;
+              min-height: 90vh;
+              justify-content: center;
+              align-items: center;
+            }
+      
+            .textContainer {
+              display: flex;
+              flex-direction: column;
+              font-weight: bold;
+              font-size: 9rem;
+              text-align: center;
+              letter-spacing: -0.25rem;
+              font-weight: bolder;
+              line-height: 1;
+              justify-content: center;
+            }
+      
+            .gradientText {
+              position: relative;
+              background-image: linear-gradient(to right, #000, #000);
+              z-index: 1;
+              -webkit-background-clip: text;
+              color: transparent;
+            }
+      
+            .gradientText::before {
+              position: absolute;
+              top: 0;
+              right: 0;
+              bottom: 0;
+              left: 0;
+              z-index: -1;
+              transition: opacity 0.5s linear;
+              opacity: 0;
+              -webkit-background-clip: text;
+            }
+      
+            /* 자바스크립트로 클래스 추가 */
+            .transitionOn::before {
+              opacity: 1;
+            }
+      
+            .gradient_HTML::before {
+              content: "{{session.get("name")}}의";
+              background-image: linear-gradient(to right, #007CF0, #00DFD8);
+            }
+            .gradient_CSS::before {
+              content: "연애이야기";
+              background-image: linear-gradient(to right, #7928ca, #ff0080);
+            }
+            .gradient_Javascript::before {
+              content: "챗봇";
+              background-image: linear-gradient(to right, #ff4d4d, #f9cb28);
+            }
+            a#chat{
+                font-size:17px
+            }
+            
+            a#chat{
+                text-decoration-line:none
+            }
+            
+            a#chat:link{
+                color: black;
+            }
+            
+            a#chat:visited{
+                color: black;
+            }
+            
+            a#chat:active{
+                color: black;
+            }
+            
+            a#chat{
+                border:solid;
+                border-radius:30px;
+                width: 40%;
+                margin: 0 auto;
+            }
+            
+            
+          </style>
+
+        <div class="page">
+            <div class="textContainer">
+            <span id="text_1" class="gradientText gradient_HTML">{{session.get("name")}}의</span>
+            <span id="text_2" class="gradientText gradient_CSS">연애이야기</span>
+            <span id="text_3" class="gradientText gradient_Javascript"
+                >챗봇</span> 
+                <br>
+                <a href="chat" id="chat"><span id="chat"><h2>이야기 시작하기</h2></span></a>
+            </div>
+            
+            
+        </div>
+        
+    
+      <script type="text/javascript">
+        (function () {
+          const persist = 2500;
+          const textIds = ["text_1", "text_2", "text_3"];
+  
+          const turnOnTransition = (el) => {
+            el.classList.add("transitionOn");
+            setTimeout(() => {
+              el.classList.remove("transitionOn");
+            }, persist);
+          };
+          const runTransition = (id) => {
+            const el = document.getElementById(id);
+  
+            if (el) {
+              setTimeout(() => {
+                turnOnTransition(el);
+  
+                setInterval(() => {
+                  turnOnTransition(el);
+                }, persist * textIds.length);
+              }, 1);
+            }
+          };
+          textIds.forEach((id, index) => {
+            setTimeout(() => {
+              runTransition(id);
+            }, index * persist);
+          });
+        })();
+      </script>
+       
+        {% endif %}
+   
+</body>
+</html>

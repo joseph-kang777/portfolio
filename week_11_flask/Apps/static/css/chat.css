@@ -1,0 +1,157 @@
+body{
+    overflow: hidden;
+}
+
+table#logo{
+    width: 100%;
+  }
+  span#logo{
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 50px;
+  }
+  
+  a#logo:link{
+    color: black;
+  }
+  
+  a#logo:visited{
+    color: black;
+  }
+  
+  a#logo:active{
+    color: black;
+  }
+  
+  a#logo{
+    text-decoration-line:none
+  }
+  
+
+div#total{
+    height: 100vh;
+    width: 100%;
+}
+
+
+div#left {
+    text-align: left;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+div#right {
+    text-align: right;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+span#left{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:solid;
+    font-family: sans-serif;
+    font-weight: bold;
+    border-radius: 0px 10px 10px 10px;
+}
+
+span#right{
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border:solid;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: white;
+    border-radius: 10px 0px 10px 10px;
+    background-color: rgb(26, 131, 236);
+
+
+}
+
+div#histroy{
+    height: 80%;
+    width: 60%;
+    margin: 0 auto;
+    overflow-y: scroll;
+    -ms-overflow-style: none;
+}
+
+#histroy::-webkit-scrollbar{
+    display:none;
+    }
+
+form{
+    position: relative;
+    height: 65px;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input#chat{
+    height: 80%;
+    width: 100%;
+    font-size: 17px;
+    border-radius: 10px;
+    border: solid 1.5px rgb(124, 124, 124);
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+button#submit{
+    position: absolute;
+    right: 5px;
+    height: 50px;
+    width: 50px;
+    font-size: 22px;
+    border-radius: 10px;
+    text-align: center;
+    background-color: white;
+    border:none;
+  
+}
+
+div#prompt{
+
+    position: relative;
+    left: 20%;
+    right: 20%
+}
+
+.static_load_div{
+
+    display :inline-block;
+    position: fixed;
+
+    left:50%;
+    top:50%;
+
+    transform: translate(-50%,-50%);
+    font-family: sans-serif;
+    font-weight: bold;
+    font-size:30px;
+    
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition:1s;
+}
+
+.static_load_div.show{
+    opacity: 1;
+}
+
+
+#before_chat{
+    text-align: center;
+    font-size: 20px;
+    position: relative;
+    top: 42%;
+
+}
